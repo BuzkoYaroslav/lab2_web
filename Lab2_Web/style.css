@@ -1,0 +1,142 @@
+﻿.textfield {
+	height: 25px;
+	width: 98%;
+	font-size: 20px;
+	margin: 5px;
+}
+
+.add-form #submit-add {
+	width: 100%;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.result-form,
+.add-form,
+.change-form {
+	background: #3B5257;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.add-modal,
+.result-modal,
+.change-modal {
+	display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.add-form,
+.result-form,
+.change-form {
+	margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 450px; 
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.result-form #result-table {
+    font-size: 20px;
+}
+
+.result-form #result-table th {
+	text-align: right;
+}
+
+.result-form #result-table td {
+	text-align: left;
+}
+
+.close-button {
+	background: #D2E4C1;
+	border-radius: 15px;
+	float: right;
+	height: 30px;
+	margin: 10px;
+	width: 30px;
+}
+
+.triangle-list {
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	margin: auto;
+	width: 50%;
+}
+
+.triangle-list table {
+	margin: auto;
+	width: 100%;
+}
+
+.triangle-list table, 
+.triangle-list th, 
+.triangle-list td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.triangle-list table th {
+    background-color: #293584;
+    color: white;
+}
+
+.delete-button,
+.info-button,
+.change-button {
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin: auto;
+}
+
+.delete-button {
+	background: url("delete.png")  no-repeat;
+	background-size: cover !important;
+}
+
+.info-button {
+	background:url("info.png") no-repeat;
+	background-size: cover !important;
+}
+
+.change-button {
+	background:url("maximize.jpg") no-repeat;
+	background-size: cover !important;
+}
+
+.triangle-list .add-button {
+	width: 200px;
+	font-size: 20px;
+	margin: auto;
+	display: block;
+}
+
+.change-form #submit-change {
+	width: 100%;
+	font-size: 20px;
+	padding: 5px;
+}

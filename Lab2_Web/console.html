@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+    <meta charset="UTF-8">
+	<title>JavaScript lab2</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div class="add-modal">
+    <form class="add-form">
+        <input class="close-button" onclick="closePopup('add-modal')" type="button" value="X">
+        <table>
+            <tr>
+            	<td colspan="2">
+                    Input triangle
+            	</td>
+            </tr>
+            <tr>
+                <td>First side:</td>
+                <td><input class="textfield" id="first-side" type="number" step="0.001" min="0.001" required></td>
+            </tr>
+            <tr>
+                <td>Second side:</td>
+                <td><input class="textfield" id="second-side" type="number" step="0.001" min="0.001" required></td>
+            </tr>
+            <tr>
+                <td>Angle (degr):</td>
+                <td><input class="textfield" id="angle" type="number" min="0.001" max="179" step="0.001" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="submit-add" type="button" value="Add triangle"  onclick="addTriangle()"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+    <div class="triangle-list">
+    	<input class="add-button" type="button" value="Add new triangle" onclick="showPopup('add-modal')">
+        <table id="list">
+            <tr>
+                <th>№</th>
+                <th>Actions</th>
+                <th>Delete</th>
+            </tr>
+        </table>
+    </div>
+<div class="change-modal">
+	<form class="change-form">
+		<input class="close-button" type="button" value="X" onclick="closePopup('change-modal')">
+	    <table>
+	        <tr>
+	            <th>Input scale percentage:</th>
+	            <td>
+	                <input id="scale" class="textfield" type="number" min="0.001" required>
+	            </td>
+	        </tr>
+	        <tr>
+	            <td colspan="2">
+	               <input id="submit-change" type="button" value="Scale angle">
+	            </td>
+	        </tr>
+	    </table>
+	</form>
+</div>
+    <div class="result-modal" id="triangle-info">
+    <form class="result-form">
+    <input class="close-button" type="button" value="X" onclick="closePopup('result-modal')">
+    <table id="result-table">
+    	<tr>
+    		<th>side AB = </th>
+    		<td id="result-side1"></td>
+    	</tr>
+    	<tr>
+    	    <th>side BC = </th>
+    	    <td id="result-side2"></td>
+    	</tr>
+    	<tr>
+    	    <th>side AC = </th>
+    	    <td id="result-side3"></td>
+    	</tr>
+    	<tr>
+    	    <th>angle ABC = </th>
+    	    <td id="result-angle1"></td>
+    	</tr>
+    	<tr>
+    	    <th>angle BAC = </th>
+    	    <td id="result-angle2"></td>
+    	</tr>
+    	<tr>
+    	    <th>angle ACB = </th>
+    	    <td id="result-angle3"></td>
+    	</tr>
+    	<tr>
+    	    <th>Type: </th>
+    	    <td id="result-type"></td>
+    	</tr>
+    	<tr>
+    	    <th>distance between centers = </th>
+    	    <td id="result-distance-bc"></td>
+    	</tr>
+    </table>
+    </form>
+    </div>
+</body>
+</html>
